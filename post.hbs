@@ -7,7 +7,7 @@ into the {body} of the default.hbs template --}}
 <section>
 
     <header class="main content">
-        <span class="date">{{date format="MMMM D, YYYY"}}</span>
+        <span class="date">{{date format="MMMM D, YYYY"}} {{#if tags}} on {{tags separator=" | "}}{{/if}}</span>
         <h1>{{title}}</h1>
         {{#if custom_excerpt}}
             <p class="content">{{custom_excerpt}}</p>
@@ -31,28 +31,57 @@ into the {body} of the default.hbs template --}}
     </section>
     {{/if}}
 
-    <footer class="post-footer">
 
-        <div class="authors">
-            {{#foreach authors}}
-            <a class="author-box" href="{{url}}">
-                {{#if profile_image}}
-                <img class="author-profile-image" src="{{profile_image}}" alt="{{name}}" />
-                {{/if}}
-                <section class="author-box-content">
-                    <div class="author-box-label">Author</div>
-                    <h5 class="author-box-name">{{name}}</h5>
-                    {{#if bio}}
-                    <p>{{bio}}</p>
-                    {{else}}
-                    <p>Read more posts by this author.</p>
-                    {{/if}}
-                </section>
-            </a>
-            {{/foreach}}
-        </div>
+    {{#is "post"}}
+        <footer class="post-footer">
+            {{#if tags}}
+            <aside class="post-tags">
+                <span class="post-info-label">{{t "Topic"}}</span>
+                {{tags separator=" "}}
+            </aside>
+            {{/if}}
 
-    </footer>
+
+            <div class="post-share">
+                <span class="post-info-label">{{t "Share"}}</span>
+                <a href="https://twitter.com/share?text={{title}}&url={{url absolute="true"}}"
+                   onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;"
+                   class="icon fa-twitter" title="Twitter"><span class="label">Twitter</span>
+                </a>
+
+                <a href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+                   onclick="window.open(this.href, 'facebook-share', 'width=550,height=235');return false;"
+                   class="icon fa-facebook" title="Facebook"><span class="label">Facebook</span>
+                </a>
+
+                <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{url absolute="true"}}/&amp;title={{title}}"
+                   onclick="window.open(this.href, 'linkedin-share', 'width=930,height=720');return false;"
+                   class="icon fa-linkedin" title="LinkedIn"><span class="label">LinkedIn</span>
+                </a>
+            </div>
+
+            <!--
+                <div class="authors">
+                    {{#foreach authors}}
+                    <a class="author-box" href="{{url}}">
+                        {{#if profile_image}}
+                        <img class="author-profile-image" src="{{profile_image}}" alt="{{name}}" />
+                        {{/if}}
+                        <section class="author-box-content">
+                            <div class="author-box-label">Author</div>
+                            <h5 class="author-box-name">{{name}}</h5>
+                            {{#if bio}}
+                            <p>{{bio}}</p>
+                            {{else}}
+                            <p>Read more posts by this author.</p>
+                            {{/if}}
+                        </section>
+                    </a>
+                    {{/foreach}}
+                </div>
+            -->
+        </footer>
+    {{/is}}
 
     {{!--
     <section class="post-full-comments">
