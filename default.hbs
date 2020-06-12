@@ -22,7 +22,7 @@
 
     <div id="wrapper">
         <main id="main">
-            <div class="inner">
+            <div id="main-content" class="inner">
 
                 {{!-- Header --}}
                 <header id="header">
@@ -43,8 +43,17 @@
                 </header>
 
                 {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
+                
                 {{{body}}}
 
+                <div id="main-search" style="display: none; padding: 6em 0 4em 0;">
+                    <header class="major">
+                        <h2>Search results</h2>
+                    </header>
+
+                    <section class="posts" id="search-body"></section>
+                </div>
+            
             </div>
         </main>
 

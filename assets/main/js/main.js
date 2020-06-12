@@ -264,32 +264,31 @@
      ========================================================================== */
   
         if (typeof ghosthunter_key !== 'undefined') {
+            let $ghostHunter = $('#query').ghostHunter({
+                results: "#search-body",
+                //result_template: '<article class="post"><div class="inner"><div class="box post-box"><h2 class="post-title"><a href="{{link}}">{{title}}</a></h2><span class="post-meta">On <span class="post-date">{{pubDate}}</span></span></div></div></article>',
+                result_template: '<article id="gh-{{ref}}"><h3><a href="{{link}}">{{title}}</a></h3><ul class="actions special"><li><a href="{{link}}" class="button">Full Article</a></li></ul></article>',
+                info_template: '',
+                displaySearchInfo: true,
+                includebodysearch: true,
+            });
 
-            var $search_input = $('#query'),
-                $search_form = $('#query_form'),
+            let $search_input = $('#query'),
+                $search_form = $('#query_form');
                 
-                $search_close = $('.search-close');
+            $search_form.submit((event) => {
+                $('#main-content').children().each( (i, e) => {
+                    if ( !$(e).is('header') && e.id != 'main-search' )
+                        $(e).css('display', 'none');
+                })
 
-                $search_form.submit(function(event) {
-                    // html.addClass('search-active');
+                $('#main-search').css('display', '');
+                event.preventDefault()
+            });
 
-                    event.preventDefault();
-                });
+            $ghostHunter.clear();
 
-                $search_close.on({'click': function() {
-                      // html.removeClass('search-active');
-                      // searchField.val('');
-                      // $('#results').empty();
-                    }
-                  });
-
-                $search_input.ghostHunter({
-                    results: "#results",
-                    result_template: '<article class="post"><div class="inner"><div class="box post-box"><h2 class="post-title"><a href="{{link}}">{{title}}</a></h2><span class="post-meta">On <span class="post-date">{{pubDate}}</span></span></div></div></article>',
-                    info_template: '',
-                    displaySearchInfo: true,
-                    includebodysearch: true
-                });
         }
 
 })(jQuery);
+
