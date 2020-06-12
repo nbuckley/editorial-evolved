@@ -1,0 +1,30 @@
+{{!< default}}
+
+<section>
+  <header class="major">
+    <h2>Topics</h2>
+  </header>
+
+  <section class="posts">
+    {{#get 'tags' limit='all' include='count.posts'}}
+    {{#foreach tags}}
+      <article>
+        <header class="post-header" style="padding: 0;">
+          <span class="post-meta">{{ count.posts }} posts</span>
+        </header>
+        {{#if feature_image}}
+          <a href="{{url}}" class="image fit"><img src="{{img_url feature_image}}" alt="{{title}}" /></a>
+        {{/if}}
+
+        <h3><a href="{{url}}">{{name}}</a></h3>
+        <p>{{description}}</p>
+        <ul class="actions special">
+          <li><a href="{{url}}" class="button">Articles List</a></li>
+        </ul>
+
+      </article>
+    {{/foreach}}
+    {{/get}}
+  </section>
+
+</section>
