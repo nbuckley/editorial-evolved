@@ -2428,7 +2428,7 @@ button:disabled,
   height: 3rem;
   margin-right: 0.5em;
   padding: 0;
-  font-size: 1em;
+  font-size: 2rem;
   line-height: 3rem;
   text-align: center;
   text-decoration: none;
@@ -2477,6 +2477,44 @@ button:disabled,
   transition: all ease 0.2s;
   box-sizing: border-box;
   white-space: nowrap;
+}
+
+.tags {
+  display: block;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+p.post-card-p {
+  margin-bottom: 0.5em;
+}
+
+h3.post-card-h3 {
+  margin-bottom: 0.5em;
+}
+
+span.post-card-tags {
+  margin-bottom: 2em;
+}
+
+.date {
+  display: block;
+  text-align: center;
+}
+.date .date-label {
+  font-weight: bold;
+}
+
+h1.sm_margin {
+  margin-bottom: 0.1em;
+  text-align: center;
+}
+
+.post-read-time {
+  display: block;
+  margin: 1em 0;
+  font-style: italic;
+  text-align: center;
 }
 
 .subscribe-button {
@@ -2847,6 +2885,87 @@ button:disabled,
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 }
+/* See: https://codepen.io/stoicfury/pen/mdEVMrq */
+.chip {
+  display: inline-flex;
+  flex-direction: row;
+  background-color: #f56a6a;
+  border: none;
+  cursor: default;
+  height: 32px;
+  outline: none;
+  padding: 0;
+  font-size: 14px;
+  font-color: #333333;
+  font-family: "Open Sans", sans-serif;
+  white-space: nowrap;
+  align-items: center;
+  border-radius: 16px;
+  vertical-align: middle;
+  text-decoration: none;
+  justify-content: center;
+  margin-top: 8px;
+  /*&:hover {
+      background-color: #F88F8F;
+  }*/
+}
+
+.chip-head {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  background-color: #32C5D2;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+  align-items: center;
+  user-select: none;
+  border-radius: 50%;
+  justify-content: center;
+  width: 32px;
+  color: #fff;
+  height: 32px;
+  font-size: 20px;
+  margin-right: -4px;
+}
+
+.chip-content {
+  cursor: inherit;
+  display: flex;
+  align-items: center;
+  user-select: none;
+  white-space: nowrap;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.chip-svg {
+  color: #999999;
+  cursor: pointer;
+  height: auto;
+  margin: 4px 4px 0 -8px;
+  fill: currentColor;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  font-size: 24px;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.chip-svg:hover {
+  color: #666666;
+}
+
+.achip {
+  border-bottom: none;
+  color: white;
+}
+.achip:hover {
+  color: white !important;
+  text-decoration: underline;
+}
+
 /* Wrapper */
 #wrapper {
   display: -moz-flex;
@@ -3195,6 +3314,19 @@ button:disabled,
   text-align: center;
 }
 
+section.section-header {
+  background-color: #F7F7F7;
+  background-size: cover !important;
+  padding: 0 2em 3em 2em;
+}
+section.section-header p.content {
+  color: #5F666B;
+}
+
+section.second-section {
+  padding-top: 4em;
+}
+
 /* Banner */
 .banner {
   padding: 6em 0 4em 0;
@@ -3480,7 +3612,7 @@ button:disabled,
 }
 
 .post-footer {
-  margin: 4rem auto 0;
+  margin: 2rem auto 0;
   max-width: 700px;
 }
 

@@ -1,18 +1,16 @@
 <article class="banner">
     <div class="content">
         <header>
-            <div class="post-card-date">{{date published_at format="MMMM D, YYYY"}} ({{date published_at timeago="true"}})</div>
-            <h1><a href="{{url}}">{{title}}</a></h1>
-            <p>{{reading_time}} {{#if custom_excerpt}}&ndash; {{custom_excerpt}}{{/if}}</p>
+            <div class="post-card-date">{{date published_at format="MMM D, YYYY"}} ({{date published_at timeago="true"}})</div>
+            <h3><a href="{{url}}">{{title}}</a></h3>
+            <p><em>{{reading_time}}</em> {{#if custom_excerpt}}&ndash; {{custom_excerpt}}{{/if}}</p>
         </header>
 
-        {{content}}
-
         {{#if tags}}
-        <span class="tags">
+        <span class="tags post-card-tags">
             {{#foreach tags}}
             <div class="chip">
-                <a href="{{url}}" title="{{name}}" class="tag tag-{{id}} {{slug}}"><div class="chip-content">{{name}}</div></a>
+                <a href="{{url}}" title="{{name}}" class="achip tag tag-{{id}} {{slug}}"><div class="chip-content">{{name}}</div></a>
             </div>
             {{/foreach}}
         </span>

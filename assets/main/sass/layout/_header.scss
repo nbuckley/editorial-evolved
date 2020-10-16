@@ -72,3 +72,16 @@
         font-weight: 300;
         text-align: center;
     }
+
+    section.section-header {
+        background-color: #F7F7F7;
+        background-size: cover !important;
+        padding: 0 2em 3em 2em;
+        p.content {
+            color: #5F666B;
+        }
+    }
+
+    section.second-section {
+        padding-top: 4em;
+    }

@@ -1,56 +1,56 @@
-        <article>
-            {{#if feature_image}}
-            <a href="{{url}}" class="image fit"><img src="{{img_url feature_image}}" alt="{{title}}" /></a>
-            {{/if}}
+<article>
+    {{#if feature_image}}
+    <a href="{{url}}" class="image fit"><img src="{{img_url feature_image}}" alt="{{title}}" /></a>
+    {{/if}}
 
-            <div class="post-card-date">{{date published_at format="MMMM D, YYYY"}} ({{date published_at timeago="true"}})</div>
+    <div class="post-card-date">{{date published_at format="MMM D, YYYY"}} ({{date published_at timeago="true"}})</div>
 
-            <h3><a href="{{url}}">{{title}}</a></h3>
+    <h3 class="post-card-h3"><a href="{{url}}">{{title}}</a></h3>
 
-            <p>{{reading_time}} &ndash;
-            {{#if custom_excerpt}}
-                {{custom_excerpt}}
-            {{else}}
-                {{excerpt words="42"}}
-            {{/if}}
-            </p>
+    <p class="post-card-p"><em>{{reading_time}}</em> &ndash;
+    {{#if custom_excerpt}}
+        {{custom_excerpt}}
+    {{else}}
+        {{excerpt words="42"}}
+    {{/if}}
+    </p>
 
-            {{#if tags}}
-            <span class="tags">
-                {{#foreach tags}}
-                <div class="chip">
-                    <a href="{{url}}" title="{{name}}" class="tag tag-{{id}} {{slug}}"><div class="chip-content">{{name}}</div></a>
+    {{#if tags}}
+    <span class="tags post-card-tags">
+        {{#foreach tags}}
+        <div class="chip">
+            <a href="{{url}}" title="{{name}}" class="achip tag tag-{{id}} {{slug}}"><div class="chip-content">{{name}}</div></a>
+        </div>
+        {{/foreach}}
+    </span>
+    {{/if}}
+
+    {{!--<footer class="post-card-meta">
+        <ul class="author-list">
+            {{#foreach authors}}
+            <li class="author-list-item">
+
+                <div class="author-name-tooltip">
+                    {{name}}
                 </div>
-                {{/foreach}}
-            </span>
-            {{/if}}
 
-            {{!--<footer class="post-card-meta">
-                <ul class="author-list">
-                    {{#foreach authors}}
-                    <li class="author-list-item">
+                {{#if profile_image}}
+                <a href="{{url}}" class="static-avatar">
+                    <img class="author-profile-image" src="{{img_url profile_image size="xs"}}" alt="{{name}}" />
+                </a>
+                {{else}}
+                <a href="{{url}}" class="static-avatar author-profile-image">{{> "icons/avatar"}}</a>
+                {{/if}}
+            </li>
+            {{/foreach}}
+        </ul>
+        <div class="post-card-byline-content">
+            <span>{{#has author="count:>2"}}Multiple authors{{else}}{{authors}}{{/has}}</span>
+            <span class="post-card-byline-date"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time> <span class="bull">&bull;</span> {{reading_time}}</span>
+        </div>
+    </footer>--}}
 
-                        <div class="author-name-tooltip">
-                            {{name}}
-                        </div>
-
-                        {{#if profile_image}}
-                        <a href="{{url}}" class="static-avatar">
-                            <img class="author-profile-image" src="{{img_url profile_image size="xs"}}" alt="{{name}}" />
-                        </a>
-                        {{else}}
-                        <a href="{{url}}" class="static-avatar author-profile-image">{{> "icons/avatar"}}</a>
-                        {{/if}}
-                    </li>
-                    {{/foreach}}
-                </ul>
-                <div class="post-card-byline-content">
-                    <span>{{#has author="count:>2"}}Multiple authors{{else}}{{authors}}{{/has}}</span>
-                    <span class="post-card-byline-date"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time> <span class="bull">&bull;</span> {{reading_time}}</span>
-                </div>
-            </footer>--}}
-
-            <ul class="actions special">
-                <li><a href="{{url}}" class="button">Read More</a></li>
-            </ul>
-        </article>
+    <ul class="actions special">
+        <li><a href="{{url}}" class="button">Read More</a></li>
+    </ul>
+</article>

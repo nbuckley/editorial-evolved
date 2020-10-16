@@ -9,8 +9,8 @@
         </section>
         --}}
 
-        {{!-- Menu --}}
-        <nav class="menu">
+        {{!-- Menu (id=menu too so accordion nested links work) --}}
+        <nav class="menu" id="menu">
             <header class="major">
                 <h2>Menu</h2>
             </header>
@@ -22,8 +22,19 @@
 
                 {{!-- Subscribe button --}}
                 {{#if @labs.members}}
-                  <li><a class="subscribe-button" href="#subscribe">Subscribe</a></li>
+                  <li><a href="#subscribe">Subscribe</a></li>
                 {{/if}}
+
+                {{!-- Other stuff --}}
+                <li>
+                    <span class="opener">Other Stuff</span>
+                    <ul>
+                        <li><a href="#">Stuff Worth Reading</a></li>
+                        <li><a href="#">Stuff Worth Watching</a></li>
+                        <li><a href="#">Stuff Worth Listening to</a></li>
+                        <li><a href="#">Stuff Worth Playing</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
 
