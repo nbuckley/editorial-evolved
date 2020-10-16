@@ -1,17 +1,43 @@
 <div id="sidebar">
     <div class="inner">
 
-        {{!-- Nav - partials/navigation.hbs --}}
-        {{#if @site.navigation}}
-            {{navigation}}
-        {{/if}}
-
-        <!-- Search -->
+        {{!-- Search [DOES NOT WORK]
         <section id="search" class="alt">
             <form id="query_form">
                 <input type="text" name="query" id="query" placeholder="Search"/>
             </form>
         </section>
+        --}}
+
+        {{!-- Menu --}}
+        <nav class="menu">
+            <header class="major">
+                <h2>Menu</h2>
+            </header>
+            <ul class="links">
+                {{!-- Nav - partials/navigation.hbs --}}
+                {{#if @site.navigation}}
+                    {{navigation}}
+                {{/if}}
+
+                {{!-- Subscribe button --}}
+                {{#if @labs.members}}
+                  <li><a class="subscribe-button" href="#subscribe">Subscribe</a></li>
+                {{/if}}
+            </ul>
+        </nav>
+
+        {{!-- Topic Categories --}}
+        <nav class="menu">
+            <header class="major">
+                <h2>Topic Categories</h2>
+            </header>
+            <ul class="links">
+                {{#if @site.secondary_navigation}}
+                    {{navigation type="secondary"}}
+                {{/if}}
+            </ul>
+        </nav>
 
         {{!-- Recent posts --}}
         <section>

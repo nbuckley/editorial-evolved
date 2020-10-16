@@ -2,28 +2,31 @@
 {{!-- The tag above means: insert everything in this file
 into the {body} of the default.hbs template --}}
 
+{{!-- Index background image (if used) --}}
+<header class="site-home-header">
+    {{> header-background background=@site.cover_image}} {{!--Special header-background.hbs partial to generate the background image--}}
+        <div class="inner">
+            <div class="site-header-content">
+                <h1 class="site-title">
+                    {{#if @site.logo}}
+                        <img class="site-logo" src="{{img_url @site.logo size="l"}}" alt="{{@site.title}}" />
+                    {{else}}
+                        {{@site.title}}
+                    {{/if}}
+                </h1>
+                <h2 class="site-description">{{@site.description}}</h2>
+            </div>
+        </div>
+    </div>
+</header>
+
+{{> "site-info"}}
 
 {{!-- Featured Post --}}
 {{#is "home"}}
     {{#get "posts" filter="featured:true" limit="1" as |featured_post|}}
         {{#foreach featured_post}}
-            <article id="banner">
-                <div class="content">
-                    <header>
-                        <h1><a href="{{url}}">{{title}}</a></h1>
-                        {{#if custom_excerpt}}<p>{{custom_excerpt}}</p>{{/if}}
-                    </header>
-                    {{content words="42"}}
-                    <ul class="actions">
-                        <li><a href="{{url}}" class="button big">Learn More</a></li>
-                    </ul>
-                </div>
-                {{#if feature_image}}
-                <a href="{{url}}" class="image object">
-                    <img src="{{img_url feature_image}}" alt="{{title}}" />
-                </a>
-                {{/if}}
-            </article>
+            {{> "post-card-featured"}}
         {{/foreach}}
     {{/get}}
 {{/is}}
@@ -37,16 +40,7 @@ into the {body} of the default.hbs template --}}
 
     <section class="posts">
         {{#foreach posts}}
-        <article>
-            {{#if feature_image}}
-            <a href="{{url}}" class="image fit"><img src="{{img_url feature_image}}" alt="{{title}}" /></a>
-            {{/if}}
-            <h3><a href="{{url}}">{{title}}</a></h3>
-            <p>{{excerpt words="33"}}</p>
-            <ul class="actions special">
-                <li><a href="{{url}}" class="button">Full Article</a></li>
-            </ul>
-        </article>
+			{{> "post-card-normal"}}
         {{/foreach}}
     </section>
 

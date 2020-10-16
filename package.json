@@ -1,6 +1,6 @@
 {
-    "name": "editorial-ghost-theme",
-    "description": "This is Editorial, a news-oriented theme for Ghost.",
+    "name": "editorial-evolved",
+    "description": "This is Editorial Evolved, a news-oriented theme for Ghost",
     "demo": "https://editorial.ghost.io",
     "version": "3.0.0",
     "engines": {
@@ -51,6 +51,10 @@
         {
             "name": "thadumi",
             "url": "https://twitter.com/tha_dumi"
+        },
+        {
+            "name": "nbuckley",
+            "url": "https://nathanjbuckley.com"
         }
     ],
     "devDependencies": {
