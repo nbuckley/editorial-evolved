@@ -2,8 +2,12 @@
 // --------------------------------------------
 
 #header .logo {
-    color: #3d4449;
-    font-weight: bold;
+
+    color: rgb(127, 136, 143);
+
+    strong {
+        color: #3d4449;
+    }
 }
 
 #header .logo.image {

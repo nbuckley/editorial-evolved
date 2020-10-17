@@ -29,16 +29,17 @@
                     {{#if @site.logo}}
                         <a href="{{@site.url}}" class="logo image"><img src="{{@site.logo}}" alt="{{@site.title}}" /></a>
                     {{else}}
-                        <a href="{{@site.url}}" class="logo">{{@site.title}}</a>
+                        <a href="{{@site.url}}" class="logo"><strong>{{@site.title}}</strong> by Nathan Buckley</a>
                     {{/if}}
                     <ul class="icons">
-                        {{#if @site.twitter}}
-                            <li><a href="{{twitter_url @site.twitter}}" class="icon fa-twitter" title="Twitter"><span class="label">Twitter</span></a></li>
-                        {{/if}}
-                        {{#if @site.facebook}}
-                            <li><a href="{{facebook_url @site.facebook}}" class="icon fa-facebook" title="Facebook"><span class="label">Facebook</span></a></li>
-                        {{/if}}
-                        <li><a href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" class="icon fa-rss" target="_blank" rel="noopener"><span class="label" title="RSS">RSS</span></a></li>
+                        <li><a alt="Email" href="https://nathanjbuckley.com/contact.php"><i class="fas fa-paper-plane"></i></a></li>
+                        <li><a alt="Discord" href="https://nathan.live/discord" target="_blank"><i class="fab fa-discord"></i></a></li>
+                        <li><a alt="Twitter" href="https://twitter.com/nathanjbuckley/" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                        <li><a alt="Instagram" href="https://www.instagram.com/nathanjbuckley/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        <li><a alt="LinkedIn" href="https://www.linkedin.com/in/buckleynj/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a alt="Facebook" href="https://www.facebook.com/stoic" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a alt="YouTube" href="https://nathan.live/youtube" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                        <li><a alt="RSS Feed" href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" target="_blank" rel="noopener"><i class="fas fa-rss"></i></a></li>
                     </ul>
                 </header>
 

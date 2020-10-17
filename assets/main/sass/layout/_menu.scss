@@ -42,9 +42,12 @@
 							'transform #{_duration(transition)} ease-in-out'
 						));
 						color: _palette(fg-light);
-						content: '\f078';
+						content: '︿';
 						position: absolute;
+                        font-weight:bold;
+                        font-size: 155%;
 						right: 0;
+                        top:0;
 					}
 
 					&:hover {
@@ -59,7 +62,9 @@
 						}
 
 						&:before {
-							@include vendor('transform', 'rotate(-180deg)');
+                            //@include vendor('transform', 'rotate(-180deg)');
+                            transform: rotate(-180deg) translateY(-5px);
+							//@include vendor('transform', ('rotate(-180deg)','translateY(10px)'));
 						}
 					}
 				}

@@ -88,18 +88,21 @@
 			-webkit-tap-highlight-color: rgba(255,255,255,0);
 			border: 0;
 			display: block;
+            // specify a larger height & width than the icon itself so it's easier to press
 			height: 7.5em;
+            width: 6em;
 			left: _size(sidebar-width);
-			line-height: 7.5em;
+			//line-height: 7.5em;
 			outline: 0;
-			overflow: hidden;
+			//overflow: hidden;
 			position: absolute;
-			text-align: center;
-			text-indent: 7.5em;
-			top: 0;
-			width: 6em;
+			//text-align: left;
+			text-indent: 0em;
+			top: 1em;
+
 			z-index: _misc(z-index-base);
 
+            /*
 			&:before {
 				content: '\f0c9';
 				font-size: 2rem;
@@ -111,6 +114,18 @@
 				top: 0;
 				width: inherit;
 			}
+            */
+
+            & > i.fas {
+                display: inline;
+                font-size: 1.6rem;
+                background-color: rgba(255, 255, 255,.90);
+                border-radius: 10%;
+                margin: 10px;
+                padding: 5px;
+                text-indent: 0;
+            }
+
 		}
 
 		&.inactive {
@@ -137,9 +152,8 @@
 				height: 6.25em;
 				left: _size(sidebar-width-alt);
 				line-height: 6.25em;
-				text-indent: 5em;
+				text-indent: 0em;
 				width: 5em;
-
 				&:before {
 					font-size: 1.5rem;
 				}
@@ -180,9 +194,9 @@
 			}
 
 			.toggle {
-				text-indent: 6em;
+				//text-indent: 6em;
 				width: 6em;
-
+                top: 0em;
 				&:before {
 					font-size: 1.5rem;
 					margin-left: (-0.875em / 2);
@@ -196,9 +210,9 @@
 
 		@include breakpoint('<=small') {
 			.toggle {
-				text-indent: 7.25em;
+				//text-indent: 7.25em;
 				width: 7.25em;
-
+                /*
 				&:before {
 					color: _palette(fg);
 					margin-left: (-0.125em / 2);
@@ -208,7 +222,7 @@
 				}
 
 				&:after {
-					background: transparentize(lighten(_palette(fg), 35), 0.25);
+					//background: transparentize(lighten(_palette(fg), 35), 0.25);
 					border-radius: _size(border-radius);
 					content: '';
 					height: 3.5em;
@@ -217,6 +231,7 @@
 					top: 1em;
 					width: 5em;
 				}
+                */
 			}
 		}
 	}

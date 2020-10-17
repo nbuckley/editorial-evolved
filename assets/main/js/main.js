@@ -89,18 +89,16 @@
                     .appendTo($head);
 
         // Toggle.
-            $('<a href="#sidebar" class="toggle">Toggle</a>')
-                .appendTo($sidebar)
-                .on('click', function(event) {
+            $('#sidebartgl').on('click', function(event) {
 
-                    // Prevent default.
-                        event.preventDefault();
-                        event.stopPropagation();
+                // Prevent default.
+                    event.preventDefault();
+                    event.stopPropagation();
 
-                    // Toggle.
-                        $sidebar.toggleClass('inactive');
+                // Toggle.
+                    $sidebar.toggleClass('inactive');
 
-                });
+            });
 
         // Events.
 
@@ -262,7 +260,7 @@
     /* ==========================================================================
      ghostHunter
      ========================================================================== */
-  
+
         if (typeof ghosthunter_key !== 'undefined') {
             let $ghostHunter = $('#query').ghostHunter({
                 results: "#search-body",
@@ -275,7 +273,7 @@
 
             let $search_input = $('#query'),
                 $search_form = $('#query_form');
-                
+
             $search_form.submit((event) => {
                 $('#main-content').children().each( (i, e) => {
                     if ( !$(e).is('header') && e.id != 'main-search' )
