@@ -2674,6 +2674,10 @@ button:disabled,
 p.post-card-p {
   margin-bottom: 0.5em;
 }
+p.post-card-p em {
+  display: inline-block;
+  font-weight: bold;
+}
 
 h3.post-card-h3 {
   margin-bottom: 0.5em;
@@ -3075,14 +3079,14 @@ h1.sm_margin {
 .chip {
   display: inline-flex;
   flex-direction: row;
-  background-color: #f56a6a;
+  background-color: #7B7B7B;
   border: none;
   cursor: default;
   height: 32px;
   outline: none;
   padding: 0;
   font-size: 14px;
-  font-color: #333333;
+  color: #333333;
   font-family: "Open Sans", sans-serif;
   white-space: nowrap;
   align-items: center;
@@ -3150,6 +3154,66 @@ h1.sm_margin {
 .achip:hover {
   color: white !important;
   text-decoration: underline;
+}
+
+div.chip.animals-nature {
+  background-color: #4EB740;
+  color: #000000;
+}
+
+div.chip.causality-meaning-purpose {
+  background-color: #B7406C;
+  color: #000000;
+}
+
+div.chip.entertainment {
+  background-color: #B74040;
+  color: #000000;
+}
+
+div.chip.ethics {
+  background-color: #4E40B7;
+  color: #000000;
+}
+
+div.chip.knowledge-belief {
+  background-color: #A840B7;
+  color: #000000;
+}
+
+div.chip.law-government {
+  background-color: #405DB7;
+  color: #000000;
+}
+
+div.chip.logic {
+  background-color: #A8B740;
+  color: #000000;
+}
+
+div.chip.people-society {
+  background-color: #408AB7;
+  color: #000000;
+}
+
+div.chip.personal-growth {
+  background-color: #40B78A;
+  color: #000000;
+}
+
+div.chip.relationships {
+  background-color: #40B7B7;
+  color: #000000;
+}
+
+div.chip.science {
+  background-color: #B79940;
+  color: #000000;
+}
+
+div.chip.technology {
+  background-color: #B76C40;
+  color: #000000;
 }
 
 /* Wrapper */
@@ -3439,6 +3503,14 @@ h1.sm_margin {
   }
 }
 
+ul.links li i {
+  font-size: 150%;
+  width: 2rem;
+  text-align: center;
+  vertical-align: middle;
+  margin-right: 0.1em;
+}
+
 /* Header */
 #header {
   display: -moz-flex;
@@ -3497,6 +3569,27 @@ h1.sm_margin {
 
 .site-home-header .site-header-content {
   padding: 5vw 3vw 6vw;
+  background-size: cover;
+}
+@media screen and (min-width: 1681px) {
+  .site-home-header .site-header-content {
+    background: transparent url("../../images/The_Prologue_and_The_Promise_by_Robert_McCall_BASE@1.00x.jpg") no-repeat fixed center;
+  }
+}
+@media screen and (max-width: 1680px) {
+  .site-home-header .site-header-content {
+    background: transparent url("../../images/The_Prologue_and_The_Promise_by_Robert_McCall_BASE@0.75x.jpg") no-repeat fixed center;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .site-home-header .site-header-content {
+    background: transparent url("../../images/The_Prologue_and_The_Promise_by_Robert_McCall_BASE@0.50x.jpg") no-repeat fixed center;
+  }
+}
+@media screen and (max-width: 980px) {
+  .site-home-header .site-header-content {
+    background: transparent url("../../images/The_Prologue_and_The_Promise_by_Robert_McCall_BASE@0.25x.jpg") no-repeat fixed center;
+  }
 }
 
 .site-home-header .site-title {
@@ -3699,7 +3792,7 @@ section.second-section {
   padding-left: 1em;
 }
 .menu > ul > li > ul a, .menu > ul > li > ul span {
-  font-size: 0.8em;
+  font-size: 1em;
 }
 .menu > ul > li > ul > li {
   margin: 0.125em 0 0 0;

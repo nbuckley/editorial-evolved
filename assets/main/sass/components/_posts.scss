@@ -262,6 +262,11 @@
 }
 p.post-card-p {
     margin-bottom: 0.5em;
+
+    em {
+        display: inline-block;
+        font-weight: bold;
+    }
 }
 
 h3.post-card-h3 {

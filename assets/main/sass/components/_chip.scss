@@ -3,14 +3,14 @@
 .chip {
     display: inline-flex;
     flex-direction: row;
-    background-color: #f56a6a;
+    background-color: #7B7B7B;  // matches derived grays from _tags.scss
     border: none;
     cursor: default;
     height: 32px;
     outline: none;
     padding: 0;
     font-size: 14px;
-    font-color: #333333;
+    color: #333333;
     font-family:"Open Sans", sans-serif;
     white-space: nowrap;
     align-items: center;
@@ -24,7 +24,7 @@
         background-color: #F88F8F;
     }*/
 }
-.chip-head{
+.chip-head {
     display: flex;
     position: relative;
     overflow: hidden;
@@ -50,7 +50,7 @@
     padding-left: 12px;
     padding-right: 12px;
 }
-.chip-svg{
+.chip-svg {
     color: #999999;
     cursor: pointer;
     height: auto;

@@ -7,19 +7,20 @@
 
     <h3 class="post-card-h3"><a href="{{url}}">{{title}}</a></h3>
 
-    <p class="post-card-p"><em>{{reading_time}}</em> &ndash;
+    <p class="post-card-p">
     {{#if custom_excerpt}}
         {{custom_excerpt}}
     {{else}}
         {{excerpt words="42"}}
     {{/if}}
+    <em>({{reading_time}})</em>
     </p>
 
     {{#if tags}}
     <span class="tags post-card-tags">
         {{#foreach tags}}
-        <div class="chip">
-            <a href="{{url}}" title="{{name}}" class="achip tag tag-{{id}} {{slug}}"><div class="chip-content">{{name}}</div></a>
+        <div class="chip {{slug}}">
+            <a href="{{url}}" title="{{name}}" class="achip tag tag-{{id}}"><div class="chip-content">{{name}}</div></a>
         </div>
         {{/foreach}}
     </span>

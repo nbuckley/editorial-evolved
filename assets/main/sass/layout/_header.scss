@@ -60,6 +60,27 @@
 
     .site-home-header .site-header-content {
         padding: 5vw 3vw 6vw;
+        background-size: cover;
+
+        @include breakpoint("xlarge-to-max") {
+            background: transparent url("../../images/The_Prologue_and_The_Promise_by_Robert_McCall_BASE@1.00x.jpg") no-repeat fixed center;
+        }
+
+        @include breakpoint("<=xlarge") {
+            background: transparent url("../../images/The_Prologue_and_The_Promise_by_Robert_McCall_BASE@0.75x.jpg") no-repeat fixed center;
+        }
+
+        @include breakpoint("<=large") {
+            background: transparent url("../../images/The_Prologue_and_The_Promise_by_Robert_McCall_BASE@0.50x.jpg") no-repeat fixed center;
+        }
+
+        @include breakpoint("<=medium") {
+            background: transparent url("../../images/The_Prologue_and_The_Promise_by_Robert_McCall_BASE@0.25x.jpg") no-repeat fixed center;
+        }
+
+        //@include breakpoint("<=small") {
+
+        //}
     }
 
     .site-home-header .site-title {

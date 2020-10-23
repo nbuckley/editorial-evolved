@@ -235,3 +235,12 @@
 			}
 		}
 	}
+
+// make the font-awesome icons bigger
+ul.links li i {
+    font-size: 150%;
+    width: 2rem;
+    text-align: center;
+    vertical-align: middle;
+    margin-right: .1em;
+}
