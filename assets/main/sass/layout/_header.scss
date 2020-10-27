@@ -12,6 +12,10 @@
 		padding: 6em 0 1em 0;
 		position: relative;
 
+        a {
+            text-decoration: none;
+        }
+
 		> * {
 			@include vendor('flex', '1');
 			margin-bottom: 0;
@@ -56,42 +60,96 @@
 
     .site-home-header .site-header-background {
         margin-top: 0;
-    }
-
-    .site-home-header .site-header-content {
-        padding: 5vw 3vw 6vw;
-        background-size: cover;
 
         @include breakpoint("xlarge-to-max") {
-            background: transparent url("../../images/The_Prologue_and_The_Promise_by_Robert_McCall_BASE@1.00x.jpg") no-repeat fixed center;
+            background: transparent url("../../images/The_Prologue_and_The_Promise_by_Robert_McCall_BASE@1.00x.jpg") center/cover no-repeat;
         }
 
         @include breakpoint("<=xlarge") {
-            background: transparent url("../../images/The_Prologue_and_The_Promise_by_Robert_McCall_BASE@0.75x.jpg") no-repeat fixed center;
+            background: transparent url("../../images/The_Prologue_and_The_Promise_by_Robert_McCall_BASE@1.00x.jpg") center/cover no-repeat;
         }
 
         @include breakpoint("<=large") {
-            background: transparent url("../../images/The_Prologue_and_The_Promise_by_Robert_McCall_BASE@0.50x.jpg") no-repeat fixed center;
+            background: transparent url("../../images/The_Prologue_and_The_Promise_by_Robert_McCall_BASE@0.75x.jpg") center/cover no-repeat;
         }
 
         @include breakpoint("<=medium") {
-            background: transparent url("../../images/The_Prologue_and_The_Promise_by_Robert_McCall_BASE@0.25x.jpg") no-repeat fixed center;
+            background: transparent url("../../images/The_Prologue_and_The_Promise_by_Robert_McCall_BASE@0.50x.jpg") center/cover no-repeat;
         }
 
-        //@include breakpoint("<=small") {
+        @include breakpoint("<=small") {
+            background: transparent url("../../images/The_Prologue_and_The_Promise_by_Robert_McCall_BASE@0.25x.jpg") center/cover no-repeat;
+        }
+
+        //@include breakpoint("<=xsmall") {
 
         //}
+    }
+
+    .site-home-header .site-header-content {
+        padding: 5vw 3vw 2vw;
+        text-align: center;
     }
 
     .site-home-header .site-title {
         font-size: 5.5rem;
         text-align: center;
+        background-color: rgb(245, 106, 106,0.75);
+        display: inline-block;
+        padding: 1rem 2rem;
+        color: white;
+        /*
+        -webkit-text-fill-color: white;
+        -webkit-text-stroke-width: 3px;
+        -webkit-text-stroke-color: #3d4449;
+        text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+         */
+
+        @include breakpoint('<=large') {
+            font-size: 4.6rem;
+        }
+
+        @include breakpoint('<=medium') {
+            font-size: 3.4rem;
+        }
+
+        @include breakpoint('<=small') {
+            font-size: 2.7rem;
+            padding: .5rem 1rem;
+        }
+
+        @include breakpoint('<=xsmall') {
+            font-size: 1.6rem;
+        }
     }
 
     .site-home-header .site-description {
         font-size: 2.2rem;
         font-weight: 300;
         text-align: center;
+        margin: 19rem auto 0 auto;
+        color: white;
+        padding: 1rem 1.5rem;
+        background-color: rgb(245, 106, 106,0.75);
+        display: inline-block;
+
+        @include breakpoint('<=large') {
+            font-size: 2rem;
+        }
+
+        @include breakpoint('<=medium') {
+            font-size: 1.75rem;
+        }
+
+        @include breakpoint('<=small') {
+            font-size: 1.5rem;
+            adding: .5rem .75rem;
+            margin: 0rem 0 0 0;
+        }
+
+        @include breakpoint('<=xsmall') {
+            font-size: 1.1rem;
+        }
     }
 
     section.section-header {
@@ -101,9 +159,46 @@
         padding: 3em 2em 1em 2em !important;
         p.content {
             color: #5F666B;
+            letter-spacing: normal;
+            text-transform: none;
         }
     }
 
     section.second-section {
         padding-top: 4em;
     }
+
+.site-info {
+    margin-top: 1em;
+
+    p {
+        margin: 0 0 1em 0;
+    }
+
+    i.fas.fa-bars {
+        color: _palette(accent);;
+        padding: 5px;
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+}
+
+.caption {
+    color: white;
+    text-align: right;
+    font-weight: bold;
+    display: block;
+    margin: 0 auto;
+
+    a {
+        color: #f6ed9e;
+        border-bottom: none;
+        text-decoration: underline;
+
+        &:hover {
+            color: #f6ed9e !important;
+        }
+    }
+}
+
+
+// signature + index-recent-posts-section defined in _main.scss

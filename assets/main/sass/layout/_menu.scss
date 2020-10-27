@@ -25,7 +25,7 @@
 				display: block;
 				font-size: 0.9em;
 				padding: 0.625em 0;
-
+                text-decoration: none;
 				&:hover {
 					color: _palette(accent);
 				}
@@ -85,6 +85,7 @@
 
 					a, span {
 						font-size: 1em;
+                        text-decoration: none;
 					}
 
 					> li {

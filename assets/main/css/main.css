@@ -138,13 +138,13 @@ a {
   -webkit-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
   -ms-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
   transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
-  border-bottom: dotted 1px;
   color: #f56a6a;
-  text-decoration: none;
+  border-bottom: none;
+  text-decoration: underline;
 }
 a:hover {
   border-bottom-color: #f56a6a;
-  color: #f56a6a !important;
+  color: #f56a6a;
 }
 a:hover strong {
   color: inherit;
@@ -404,66 +404,80 @@ blockquote + .caption {
   line-height: 1.15em;
 }
 
-@media (max-width: 767px) {
-  blockquote.tiny {
-    font-size: 14px;
-    border-left: 4px solid #8cb3d9;
-  }
-
-  blockquote.small {
-    font-size: 22px;
-    border-left: 4px solid #8cb3d9;
-  }
-
-  blockquote {
-    font-size: 29px;
-    border-left: 6px solid #8cb3d9;
-  }
-
-  blockquote.large {
-    font-size: 29px;
-    border-left: 6px solid #8cb3d9;
-  }
+blockquote.tiny {
+  font-size: 0.8rem;
+  border-left: 6px solid #8cb3d9;
 }
-@media (max-width: 575px) {
-  blockquote.tiny {
-    font-size: 10px;
-    border-left: 4px solid #8cb3d9;
-  }
 
-  blockquote.small {
-    font-size: 14px;
-    border-left: 6px solid #8cb3d9;
-  }
-
-  blockquote {
-    font-size: 22px;
-    border-left: 8px solid #8cb3d9;
-  }
-
-  blockquote.large {
-    font-size: 22px;
-    border-left: 8px solid #8cb3d9;
-  }
+blockquote.small {
+  font-size: 1.1rem;
+  border-left: 8px solid #8cb3d9;
 }
-@media (min-width: 768px) {
+
+blockquote {
+  font-size: 1.6rem;
+  border-left: 10px solid #8cb3d9;
+}
+
+blockquote.large {
+  font-size: 2.1rem;
+  border-left: 12px solid #8cb3d9;
+}
+
+blockquote.xlarge {
+  font-size: 2.5rem;
+  border-left: 14px solid #8cb3d9;
+}
+
+@media screen and (max-width: 980px) {
   blockquote.tiny {
-    font-size: 24px;
+    font-size: 0.7rem;
     border-left: 6px solid #8cb3d9;
   }
 
   blockquote.small {
-    font-size: 35px;
+    font-size: 0.95rem;
     border-left: 8px solid #8cb3d9;
   }
 
   blockquote {
-    font-size: 42px;
+    font-size: 1.4rem;
     border-left: 10px solid #8cb3d9;
   }
 
   blockquote.large {
-    font-size: 60px;
+    font-size: 1.85rem;
+    border-left: 12px solid #8cb3d9;
+  }
+
+  blockquote.xlarge {
+    font-size: 2.25rem;
+    border-left: 14px solid #8cb3d9;
+  }
+}
+@media screen and (max-width: 736px) {
+  blockquote.tiny {
+    font-size: 0.6rem;
+    border-left: 6px solid #8cb3d9;
+  }
+
+  blockquote.small {
+    font-size: 0.8rem;
+    border-left: 8px solid #8cb3d9;
+  }
+
+  blockquote {
+    font-size: 1.2rem;
+    border-left: 10px solid #8cb3d9;
+  }
+
+  blockquote.large {
+    font-size: 1.6rem;
+    border-left: 12px solid #8cb3d9;
+  }
+
+  blockquote.xlarge {
+    font-size: 2rem;
     border-left: 14px solid #8cb3d9;
   }
 }
@@ -2171,11 +2185,10 @@ button,
   -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
   -ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-  background-color: transparent;
+  background-color: #f56a6a;
   border-radius: 0.375em;
   border: 0;
-  box-shadow: inset 0 0 0 2px #f56a6a;
-  color: #f56a6a !important;
+  color: white !important;
   cursor: pointer;
   display: inline-block;
   font-family: "Roboto Slab", serif;
@@ -2195,14 +2208,14 @@ input[type=reset]:hover,
 input[type=button]:hover,
 button:hover,
 .button:hover {
-  background-color: rgba(245, 106, 106, 0.05);
+  background-color: #ff6060;
 }
 input[type=submit]:active,
 input[type=reset]:active,
 input[type=button]:active,
 button:active,
 .button:active {
-  background-color: rgba(245, 106, 106, 0.15);
+  background-color: #b0b0b0;
 }
 input[type=submit].icon:before,
 input[type=reset].icon:before,
@@ -2241,7 +2254,6 @@ button.primary,
 .button.primary {
   background-color: #f56a6a;
   box-shadow: none;
-  color: #ffffff !important;
 }
 input[type=submit].primary:hover,
 input[type=reset].primary:hover,
@@ -2619,7 +2631,22 @@ button:disabled,
   text-align: center;
   text-decoration: none;
   border-radius: 2em;
+  border-bottom: none;
   transition: all ease 0.2s;
+  color: #969696;
+}
+@media screen and (max-width: 980px) {
+  .post-share a {
+    color: #f56a6a;
+  }
+}
+.post-share a:hover {
+  color: #f56a6a;
+}
+@media screen and (max-width: 980px) {
+  .post-share a:hover {
+    color: #f78282;
+  }
 }
 
 .post-share a:last-child {
@@ -2668,7 +2695,7 @@ button:disabled,
 .tags {
   display: block;
   max-width: 700px;
-  margin: 0 auto;
+  margin: 1rem 0 !important;
 }
 
 p.post-card-p {
@@ -2724,28 +2751,48 @@ h1.sm_margin {
 }
 
 .subscribe-form {
+  /*
   margin: 1.5em 0;
   padding: 6.5vw 7vw 8vw;
-  border: color-mod(var(--lightgrey) l(10%)) 1px solid;
+  border: color-mod(var(--lightgrey) l(+10%)) 1px solid;
+  background: linear-gradient(color-mod(var(--whitegrey) l(+6%)), color-mod(var(--whitegrey) l(+4%)));
+  */
   text-align: center;
-  background: linear-gradient(color-mod(var(--whitegrey) l(6%)), color-mod(var(--whitegrey) l(4%)));
   border-radius: 3px;
+  margin: 1.5em 0;
+  padding: 3em 2em;
+  background-color: #F7F7F7;
+  border-top: solid 2px rgba(210, 215, 217, 0.75);
 }
 
 .subscribe-form-title {
   margin: 0 0 3px 0;
   padding: 0;
   color: var(--darkgrey);
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   line-height: 1;
   font-weight: 600;
 }
+@media screen and (max-width: 736px) {
+  .subscribe-form-title {
+    font-size: 1.9rem;
+  }
+}
+.subscribe-form-title span {
+  color: #f56a6a;
+  display: inline-block;
+}
 
 .subscribe-form-description {
-  margin-bottom: 0.2em 0 1em;
+  margin: 1em 0;
   color: var(--midgrey);
-  font-size: 2.1rem;
-  line-height: 1.55em;
+  font-size: 1.5rem;
+}
+@media screen and (max-width: 736px) {
+  .subscribe-form-description {
+    font-size: 1rem;
+    line-height: 1;
+  }
 }
 
 .subscribe-form form {
@@ -2763,12 +2810,11 @@ h1.sm_margin {
 }
 
 .subscribe-email {
-  display: block;
-  padding: 10px;
+  padding: 0.6rem;
   width: 100%;
-  border: color-mod(var(--lightgrey) l(7%)) 1px solid;
+  border-color: color-mod(var(--lightgrey) l(-2%));
   color: var(--midgrey);
-  font-size: 1.8rem;
+  font-size: 1rem;
   line-height: 1em;
   font-weight: normal;
   user-select: text;
@@ -2783,20 +2829,19 @@ h1.sm_margin {
 }
 
 .subscribe-form button {
-  position: relative;
-  display: inline-block;
-  margin: 0 0 0 10px;
-  padding: 0 20px;
-  height: 43px;
+  margin: 0 0 0 0.5rem;
+  padding: 2em;
   outline: none;
   color: #fff;
-  font-size: 1.5rem;
-  line-height: 39px;
+  line-height: 0;
   font-weight: 400;
   text-align: center;
   background: linear-gradient(color-mod(var(--blue) whiteness(7%)), color-mod(var(--blue) l(-7%) s(-10%)) 60%, color-mod(var(--blue) l(-7%) s(-10%)) 90%, color-mod(var(--blue) l(-4%) s(-10%)));
   border-radius: 5px;
   -webkit-font-smoothing: subpixel-antialiased;
+}
+.subscribe-form button .button-content {
+  font-size: 1.2rem;
 }
 
 .subscribe-form button:active,
@@ -2833,15 +2878,15 @@ h1.sm_margin {
 .subscribe-form .error .message-error {
   margin: 1em auto 0;
   max-width: 400px;
-  color: var(--red);
-  font-size: 1.6rem;
+  color: #ba1313;
+  font-size: 1.4rem;
   line-height: 1.5em;
   text-align: center;
 }
 
 .subscribe-form .success .message-success {
   display: block;
-  color: color-mod(var(--green) l(-5%));
+  color: #53bb12;
 }
 
 .subscribe-form .invalid .message-error,
@@ -2849,15 +2894,6 @@ h1.sm_margin {
   display: block;
 }
 
-@media (max-width: 650px) {
-  .subscribe-form-title {
-    font-size: 2.4rem;
-  }
-
-  .subscribe-form-description {
-    font-size: 1.6rem;
-  }
-}
 @media (max-width: 500px) {
   .subscribe-form form {
     flex-direction: column;
@@ -3150,6 +3186,7 @@ h1.sm_margin {
 .achip {
   border-bottom: none;
   color: white;
+  text-decoration: none;
 }
 .achip:hover {
   color: white !important;
@@ -3247,7 +3284,7 @@ div.chip.technology {
   max-width: 110em;
 }
 #main > .inner > section {
-  padding: 6em 0 4em 0;
+  padding: 2rem 0;
   border-top: solid 2px rgba(210, 215, 217, 0.75);
 }
 #main > .inner > section:first-of-type {
@@ -3276,6 +3313,19 @@ div.chip.technology {
   #main > .inner > section {
     padding: 3em 0 1em 0;
   }
+}
+
+span.signature {
+  background: transparent url("../../images/signature-nathan_@0.5.png") top/contain no-repeat;
+  height: 295px;
+  width: 390px;
+  max-width: 100%;
+  display: inline-block;
+  margin: -2rem 0 0rem -1rem;
+}
+
+section.index-recent-posts-section {
+  padding-top: 0 !important;
 }
 
 /* Sidebar */
@@ -3521,6 +3571,9 @@ ul.links li i {
   padding: 6em 0 1em 0;
   position: relative;
 }
+#header a {
+  text-decoration: none;
+}
 #header > * {
   -moz-flex: 1;
   -webkit-flex: 1;
@@ -3566,41 +3619,104 @@ ul.links li i {
 .site-home-header .site-header-background {
   margin-top: 0;
 }
-
-.site-home-header .site-header-content {
-  padding: 5vw 3vw 6vw;
-  background-size: cover;
-}
 @media screen and (min-width: 1681px) {
-  .site-home-header .site-header-content {
-    background: transparent url("../../images/The_Prologue_and_The_Promise_by_Robert_McCall_BASE@1.00x.jpg") no-repeat fixed center;
+  .site-home-header .site-header-background {
+    background: transparent url("../../images/The_Prologue_and_The_Promise_by_Robert_McCall_BASE@1.00x.jpg") center/cover no-repeat;
   }
 }
 @media screen and (max-width: 1680px) {
-  .site-home-header .site-header-content {
-    background: transparent url("../../images/The_Prologue_and_The_Promise_by_Robert_McCall_BASE@0.75x.jpg") no-repeat fixed center;
+  .site-home-header .site-header-background {
+    background: transparent url("../../images/The_Prologue_and_The_Promise_by_Robert_McCall_BASE@1.00x.jpg") center/cover no-repeat;
   }
 }
 @media screen and (max-width: 1280px) {
-  .site-home-header .site-header-content {
-    background: transparent url("../../images/The_Prologue_and_The_Promise_by_Robert_McCall_BASE@0.50x.jpg") no-repeat fixed center;
+  .site-home-header .site-header-background {
+    background: transparent url("../../images/The_Prologue_and_The_Promise_by_Robert_McCall_BASE@0.75x.jpg") center/cover no-repeat;
   }
 }
 @media screen and (max-width: 980px) {
-  .site-home-header .site-header-content {
-    background: transparent url("../../images/The_Prologue_and_The_Promise_by_Robert_McCall_BASE@0.25x.jpg") no-repeat fixed center;
+  .site-home-header .site-header-background {
+    background: transparent url("../../images/The_Prologue_and_The_Promise_by_Robert_McCall_BASE@0.50x.jpg") center/cover no-repeat;
   }
+}
+@media screen and (max-width: 736px) {
+  .site-home-header .site-header-background {
+    background: transparent url("../../images/The_Prologue_and_The_Promise_by_Robert_McCall_BASE@0.25x.jpg") center/cover no-repeat;
+  }
+}
+
+.site-home-header .site-header-content {
+  padding: 5vw 3vw 2vw;
+  text-align: center;
 }
 
 .site-home-header .site-title {
   font-size: 5.5rem;
   text-align: center;
+  background-color: rgba(245, 106, 106, 0.75);
+  display: inline-block;
+  padding: 1rem 2rem;
+  color: white;
+  /*
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: #3d4449;
+  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+   */
+}
+@media screen and (max-width: 1280px) {
+  .site-home-header .site-title {
+    font-size: 4.6rem;
+  }
+}
+@media screen and (max-width: 980px) {
+  .site-home-header .site-title {
+    font-size: 3.4rem;
+  }
+}
+@media screen and (max-width: 736px) {
+  .site-home-header .site-title {
+    font-size: 2.7rem;
+    padding: 0.5rem 1rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .site-home-header .site-title {
+    font-size: 1.6rem;
+  }
 }
 
 .site-home-header .site-description {
   font-size: 2.2rem;
   font-weight: 300;
   text-align: center;
+  margin: 19rem auto 0 auto;
+  color: white;
+  padding: 1rem 1.5rem;
+  background-color: rgba(245, 106, 106, 0.75);
+  display: inline-block;
+}
+@media screen and (max-width: 1280px) {
+  .site-home-header .site-description {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 980px) {
+  .site-home-header .site-description {
+    font-size: 1.75rem;
+  }
+}
+@media screen and (max-width: 736px) {
+  .site-home-header .site-description {
+    font-size: 1.5rem;
+    adding: 0.5rem 0.75rem;
+    margin: 0rem 0 0 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .site-home-header .site-description {
+    font-size: 1.1rem;
+  }
 }
 
 section.section-header {
@@ -3610,10 +3726,40 @@ section.section-header {
 }
 section.section-header p.content {
   color: #5F666B;
+  letter-spacing: normal;
+  text-transform: none;
 }
 
 section.second-section {
   padding-top: 4em;
+}
+
+.site-info {
+  margin-top: 1em;
+}
+.site-info p {
+  margin: 0 0 1em 0;
+}
+.site-info i.fas.fa-bars {
+  color: #f56a6a;
+  padding: 5px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.caption {
+  color: white;
+  text-align: right;
+  font-weight: bold;
+  display: block;
+  margin: 0 auto;
+}
+.caption a {
+  color: #f6ed9e;
+  border-bottom: none;
+  text-decoration: underline;
+}
+.caption a:hover {
+  color: #f6ed9e !important;
 }
 
 /* Banner */
@@ -3737,6 +3883,7 @@ section.second-section {
   display: block;
   font-size: 0.9em;
   padding: 0.625em 0;
+  text-decoration: none;
 }
 .menu ul a:hover, .menu ul span:hover {
   color: #f56a6a;
@@ -3793,6 +3940,7 @@ section.second-section {
 }
 .menu > ul > li > ul a, .menu > ul > li > ul span {
   font-size: 1em;
+  text-decoration: none;
 }
 .menu > ul > li > ul > li {
   margin: 0.125em 0 0 0;
@@ -3906,6 +4054,9 @@ section.second-section {
   margin: 2rem auto 0;
   max-width: 700px;
 }
+.post-footer a {
+  text-decoration: none;
+}
 
 .authors {
   display: flex;
@@ -3923,12 +4074,7 @@ section.second-section {
   border: none;
 }
 
-.author-box:hover {
-  color: #212931 !important;
-}
-
 .author-box:hover .author-box-name {
-  color: #18bfef;
   transition: color 0.2s ease;
 }
 
@@ -3941,6 +4087,9 @@ section.second-section {
 .author-box-content {
   display: flex;
   flex-direction: column;
+}
+.author-box-content a {
+  text-decoration: none;
 }
 
 .author-box-label {

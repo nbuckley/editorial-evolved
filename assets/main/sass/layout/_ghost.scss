@@ -34,7 +34,7 @@
     }
 
     #sidebar:not(.inactive) .toggle:after {
-        background: #f56a6a;
+        background: _palette(accent);
     }
 }
 
@@ -124,6 +124,10 @@
 .post-footer {
     margin: 2rem auto 0;
     max-width: 700px;
+    a {
+        text-decoration: none
+    }
+
 }
 
 // Author Box
@@ -145,11 +149,11 @@
 }
 
 .author-box:hover {
-    color: #212931 !important;
+    //color: _palette(border) !important;
 }
 
 .author-box:hover .author-box-name {
-    color: #18bfef;
+    //color: #18bfef;
     transition: color 0.2s ease;
 }
 
@@ -162,6 +166,10 @@
 .author-box-content {
     display: flex;
     flex-direction: column;
+
+    a {
+        text-decoration: none;
+    }
 }
 
 .author-box-label {
@@ -359,7 +367,7 @@
 }
 
 .kg-bookmark-container:hover .kg-bookmark-title {
-    color: #f56a6a;
+    color: _palette(accent);
 }
 
 .kg-bookmark-description {

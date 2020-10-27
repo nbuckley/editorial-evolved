@@ -18,6 +18,16 @@ into the {body} of the default.hbs template --}}
         {{/if}}
         <div class="post-read-time">{{reading_time}}</div>
 		<p class="content">{{#if custom_excerpt}}{{custom_excerpt}}{{/if}}</p>
+
+        {{#if tags}}
+        <span class="tags">
+            {{#foreach tags}}
+            <div class="chip {{slug}}">
+                <a href="{{url}}" title="{{name}}" class="achip tag tag-{{id}}"><div class="chip-content">{{name}}</div></a>
+            </div>
+            {{/foreach}}
+        </span>
+        {{/if}}
     </header>
 
     {{!--{{#if feature_image}}
@@ -29,16 +39,6 @@ into the {body} of the default.hbs template --}}
     <div class="content">
         {{content}}
     </div>
-
-	{{#if tags}}
-	<span class="tags">
-		{{#foreach tags}}
-		<div class="chip">
-			<a href="{{url}}" title="{{name}}" class="achip tag tag-{{id}} {{slug}}"><div class="chip-content">{{name}}</div></a>
-		</div>
-		{{/foreach}}
-	</span>
-	{{/if}}
 
     {{#is "post"}}
         <footer class="post-footer">
@@ -81,6 +81,10 @@ into the {body} of the default.hbs template --}}
             </div>
 
         </footer>
+
+        {{#if @labs.members}}
+            {{> subscribe-form}}
+        {{/if}}
     {{/is}}
 
 

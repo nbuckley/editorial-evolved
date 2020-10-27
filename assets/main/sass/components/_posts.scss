@@ -209,7 +209,18 @@
     text-align: center;
     text-decoration: none;
     border-radius: 2em;
+    border-bottom: none;
     transition: all ease 0.2s;
+    color: #969696;
+    @include breakpoint('<=medium') {
+        color: _palette(accent);
+    }
+    &:hover {
+        color: _palette(accent);
+        @include breakpoint('<=medium') {
+            color: lighten(_palette(accent), 5%);
+        }
+    }
 }
 
 .post-share a:last-child {
@@ -258,7 +269,7 @@
 .tags {
     display: block;
     max-width: 700px;
-    margin: 0 auto;
+    margin: 1rem 0 !important;
 }
 p.post-card-p {
     margin-bottom: 0.5em;
