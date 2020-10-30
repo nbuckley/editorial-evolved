@@ -1,59 +1,128 @@
-div.chip.animals-nature {
-    background-color: #4EB740; //#6CD55E;
+.arts-entertainment,
+div.chip.performing-arts,
+div.chip.visual-arts,
+div.chip.games,
+div.chip.sports,
+div.chip.travel,
+div.chip.mass-media,
+div.chip.dance,
+div.chip.film-television,
+div.chip.music,
+div.chip.theatre,
+div.chip.comedy,
+div.chip.architecture,
+div.chip.comics,
+div.chip.crafts,
+div.chip.drawing,
+div.chip.painting,
+div.chip.photography,
+div.chip.board-games,
+div.chip.card-games,
+div.chip.video-games,
+div.chip.scuba-diving,
+div.chip.hobbies,
+div.chip.internet,
+div.chip.magazines,
+div.chip.newspapers,
+div.chip.radio
+{
+    background-color: #B84040 !important;
     color: #000000;
 }
 
-div.chip.causality-meaning-purpose {
-    background-color: #B7406C; //#D55E8A;
+.technology,
+div.chip.design,
+div.chip.user-exerience,
+div.chip.accessibility,
+div.chip.safety,
+div.chip.engineering,
+div.chip.automation,
+div.chip.computing,
+div.chip.artificial-intelligence
+{
+    background-color: #B86840 !important;
     color: #000000;
 }
 
-div.chip.entertainment {
-    background-color: #B74040; //#D55E5E;
+.society,
+div.chip.education,
+div.chip.jobs,
+div.chip.equality,
+div.chip.religion,
+div.chip.crime,
+div.chip.drugs,
+div.chip.relationships,
+div.chip.culture,
+div.chip.food-drink,
+div.chip.languages,
+div.chip.traditions
+{
+    background-color: #B8B840 !important;
     color: #000000;
 }
 
-div.chip.ethics {
-    background-color: #4E40B7; //#6C5ED5;
+.nature,
+div.chip.physics,
+div.chip.chemistry,
+div.chip.biology,
+div.chip.animals,
+div.chip.plants,
+div.chip.environment,
+div.chip.earth,
+div.chip.universe
+{
+    background-color: #68B840 !important;
     color: #000000;
 }
 
-div.chip.knowledge-belief {
-    background-color: #A840B7; // #C65ED5;
+.history,
+div.chip.archaeology
+{
+    background-color: #54B87C !important;
     color: #000000;
 }
 
-div.chip.law-government {
-    background-color: #405DB7; //#5E7BD5;
+.economics,
+div.chip.capitalism,
+div.chip.money,
+div.chip.business,
+div.chip.real-estate
+{
+    background-color: #40B8B8 !important;
     color: #000000;
 }
 
-div.chip.logic {
-    background-color: #A8B740; //#C6D55E;
+.law-government,
+div.chip.politics,
+div.chip.military,
+div.chip.corporatocracy
+{
+    background-color: #406AB8 !important;
     color: #000000;
 }
 
-div.chip.people-society {
-    background-color: #408AB7; //#5EA8D5;
+.philosophy,
+div.chip.logic,
+div.chip.mathematics,
+div.chip.statistics,
+div.chip.knowledge-belief,
+div.chip.causality-existence-meaning,
+div.chip.ethics
+{
+    background-color: #8E40B8 !important;
     color: #000000;
 }
 
-div.chip.personal-growth {
-    background-color: #40B78A; //#5ED5A8;
-    color: #000000;
-}
-
-div.chip.relationships {
-    background-color: #40B7B7; //#5ED5D5;
-    color: #000000;
-}
-
-div.chip.science {
-    background-color: #B79940; //#D5B75E;
-    color: #000000;
-}
-
-div.chip.technology {
-    background-color: #B76C40; //#D58A5E;
+.health-well-being,
+div.chip.physical-health,
+div.chip.mental-health,
+div.chip.personal-development,
+div.chip.nutrition,
+div.chip.exercise,
+div.chip.medicine,
+div.chip.psychology,
+div.chip.neuroscience
+{
+    background-color: #B84092 !important;
     color: #000000;
 }

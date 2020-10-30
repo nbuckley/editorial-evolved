@@ -3193,64 +3193,281 @@ h1.sm_margin {
   text-decoration: underline;
 }
 
-div.chip.animals-nature {
-  background-color: #4EB740;
+.arts-entertainment,
+div.chip.performing-arts,
+div.chip.visual-arts,
+div.chip.games,
+div.chip.sports,
+div.chip.travel,
+div.chip.mass-media,
+div.chip.dance,
+div.chip.film-television,
+div.chip.music,
+div.chip.theatre,
+div.chip.comedy,
+div.chip.architecture,
+div.chip.comics,
+div.chip.crafts,
+div.chip.drawing,
+div.chip.painting,
+div.chip.photography,
+div.chip.board-games,
+div.chip.card-games,
+div.chip.video-games,
+div.chip.scuba-diving,
+div.chip.hobbies,
+div.chip.internet,
+div.chip.magazines,
+div.chip.newspapers,
+div.chip.radio {
+  background-color: #B84040 !important;
   color: #000000;
 }
 
-div.chip.causality-meaning-purpose {
-  background-color: #B7406C;
+.technology,
+div.chip.design,
+div.chip.user-exerience,
+div.chip.accessibility,
+div.chip.safety,
+div.chip.engineering,
+div.chip.automation,
+div.chip.computing,
+div.chip.artificial-intelligence {
+  background-color: #B86840 !important;
   color: #000000;
 }
 
-div.chip.entertainment {
-  background-color: #B74040;
+.society,
+div.chip.education,
+div.chip.jobs,
+div.chip.equality,
+div.chip.religion,
+div.chip.crime,
+div.chip.drugs,
+div.chip.relationships,
+div.chip.culture,
+div.chip.food-drink,
+div.chip.languages,
+div.chip.traditions {
+  background-color: #B8B840 !important;
   color: #000000;
 }
 
+.nature,
+div.chip.physics,
+div.chip.chemistry,
+div.chip.biology,
+div.chip.animals,
+div.chip.plants,
+div.chip.environment,
+div.chip.earth,
+div.chip.universe {
+  background-color: #68B840 !important;
+  color: #000000;
+}
+
+.history,
+div.chip.archaeology {
+  background-color: #54B87C !important;
+  color: #000000;
+}
+
+.economics,
+div.chip.capitalism,
+div.chip.money,
+div.chip.business,
+div.chip.real-estate {
+  background-color: #40B8B8 !important;
+  color: #000000;
+}
+
+.law-government,
+div.chip.politics,
+div.chip.military,
+div.chip.corporatocracy {
+  background-color: #406AB8 !important;
+  color: #000000;
+}
+
+.philosophy,
+div.chip.logic,
+div.chip.mathematics,
+div.chip.statistics,
+div.chip.knowledge-belief,
+div.chip.causality-existence-meaning,
 div.chip.ethics {
-  background-color: #4E40B7;
+  background-color: #8E40B8 !important;
   color: #000000;
 }
 
-div.chip.knowledge-belief {
-  background-color: #A840B7;
+.health-well-being,
+div.chip.physical-health,
+div.chip.mental-health,
+div.chip.personal-development,
+div.chip.nutrition,
+div.chip.exercise,
+div.chip.medicine,
+div.chip.psychology,
+div.chip.neuroscience {
+  background-color: #B84092 !important;
   color: #000000;
 }
 
-div.chip.law-government {
-  background-color: #405DB7;
-  color: #000000;
+/*
+Original author: traceybaird
+https://github.com/traceybaird/CSS-Tree
+ */
+.tree ul {
+  margin: 0;
+  padding: 0;
+  margin-left: 20px;
 }
 
-div.chip.logic {
-  background-color: #A8B740;
-  color: #000000;
+.tree li {
+  list-style-type: none;
+  margin: 8px;
+  position: relative;
+  padding: 0;
 }
 
-div.chip.people-society {
-  background-color: #408AB7;
-  color: #000000;
+.tree li::before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  left: -20px;
+  border-left: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  border-radius: 0 0 0 0px;
+  width: 20px;
+  height: 15px;
 }
 
-div.chip.personal-growth {
-  background-color: #40B78A;
-  color: #000000;
+.tree li::after {
+  position: absolute;
+  content: "";
+  top: 8px;
+  left: -20px;
+  border-left: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  border-radius: 0px 0 0 0;
+  width: 20px;
+  height: 100%;
 }
 
-div.chip.relationships {
-  background-color: #40B7B7;
-  color: #000000;
+.tree li:last-child::after {
+  display: none;
 }
 
-div.chip.science {
-  background-color: #B79940;
-  color: #000000;
+.tree li:last-child:before {
+  border-radius: 0 0 0 5px;
 }
 
-div.chip.technology {
-  background-color: #B76C40;
-  color: #000000;
+ul.tree > li:first-child::before {
+  display: none;
+}
+
+ul.tree > li:first-child::after {
+  border-radius: 5px 0 0 0;
+}
+
+.tree li a {
+  border: 1px #ccc solid;
+  border-radius: 5px;
+  padding: 2px 5px;
+}
+
+.tree li a:hover,
+.tree li a:focus {
+  background: #f56a6a;
+  color: white;
+  border: 1px solid 444;
+}
+
+.tree li a:hover + ul li a,
+.tree li a:focus + ul li a {
+  background: #7d7d7d;
+  color: white;
+  border: 1px solid 444;
+}
+
+.tree li a:hover + ul li::after, .tree li a:focus + ul li::after,
+.tree li a:hover + ul li::before, .tree li a:focus + ul li::before .tree li a:hover + ul::before,
+.tree li a:focus + ul::before .tree li a:hover + ul ul::before,
+.tree li a:focus + ul ul::before {
+  border-color: #000;
+  /*connector color on hover*/
+}
+
+/* Accordion styles */
+.tabs {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
+}
+
+.tab {
+  width: 100%;
+  color: white;
+  overflow: hidden;
+}
+.tab-label {
+  display: contents !important;
+  content: "";
+  border: none !important;
+  display: flex !important;
+  justify-content: space-between;
+  padding: 1em;
+  background: #f56a6a;
+  font-weight: bold !important;
+  cursor: pointer !important;
+  /* Icon */
+}
+.tab-label:hover {
+  background: #f23a3a;
+}
+.tab-label::after {
+  content: "❯";
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  transition: all 0.35s;
+}
+.tab-content {
+  max-height: 0;
+  padding: 1px;
+  color: #f56a6a;
+  background: white;
+  transition: all 0.35s;
+}
+.tab-close {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1em;
+  font-size: 0.75em;
+  background: #f56a6a;
+  cursor: pointer;
+}
+.tab-close:hover {
+  background: #f23a3a;
+}
+
+input:checked + .tab-label {
+  background: #f23a3a;
+}
+input:checked + .tab-label::after {
+  transform: rotate(90deg);
+}
+input:checked ~ .tab-content {
+  max-height: 100vh;
+  padding: 1em;
+}
+
+.tab-label {
+  margin: 0 !important;
+  color: white !important;
+}
+.tab-label:before {
+  display: none !important;
 }
 
 /* Wrapper */

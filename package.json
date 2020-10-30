@@ -1,7 +1,7 @@
 {
     "name": "editorial-evolved",
     "description": "This is Editorial Evolved, a news-oriented theme for Ghost",
-    "demo": "https://editorial.ghost.io",
+    "demo": "https://nathanjbuckley.com/blog",
     "version": "3.0.0",
     "engines": {
         "ghost": ">=3.0.0",
@@ -21,9 +21,8 @@
         "ship": "STATUS=$(git status --porcelain); echo $STATUS; if [ -z \"$STATUS\" ]; then yarn version && git push --follow-tags; fi"
     },
     "author": {
-        "name": "Ghost Foundation",
-        "email": "hello@ghost.org",
-        "url": "https://ghost.org"
+        "name": "nbuckley",
+        "url": "https://nathanjbuckley.com"
     },
     "gpm": {
         "type": "theme",
@@ -39,7 +38,7 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/thadumi/editorial-ghost-theme.git"
+        "url": "https://github.com/nbuckley/editorial-evolved.git"
     },
     "bugs": "https://github.com/thadumi/editorial-ghost-theme/issues",
     "contributors": [
