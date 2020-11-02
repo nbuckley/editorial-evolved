@@ -160,10 +160,15 @@
     text-align: center;
 }
 
-.subscribe-form .success .message-success {
+.message-success {
     display: block;
-    color: #53bb12;
+    color: #26aa2e !important;
+    strong, b {
+        color: #26aa2e !important;
+    }
 }
+
+
 
 .subscribe-form .invalid .message-error,
 .subscribe-form .error .message-error {

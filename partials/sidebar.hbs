@@ -8,6 +8,26 @@
             </form>
         </section>
         --}}
+        <nav class="menu">
+            <header class="major">
+                <h2 class="account">Account</h2>
+            </header>
+            {{#if @member}}
+                <div class="account-div">
+                    <small>Signed in as</small>
+                    <span class="account-email" title="{{@member.email}}">{{@member.email}}</span>
+                </div>
+            {{/if}}
+            <ul class="links">
+                {{#if @member}}
+                    <li class="{{link_class for=(url) class=(concat "nav-" slug)}}"><a href="{{@site.url}}/account/">Account</a></li>
+                    <li class="{{link_class for=(url) class=(concat "nav-" slug)}}"><a href="#signout" data-members-signout>Log out</a></li>
+                {{else}}
+                    <li class="{{link_class for=(url) class=(concat "nav-" slug)}}"><a class="signin-link" href="{{@site.url}}/signin/">Log in</a></li>
+                    <li class="{{link_class for=(url) class=(concat "nav-" slug)}}"><a class="button primary small header-cta" href="{{@site.url}}/signup/">Subscribe</a></li>
+                {{/if}}
+            </ul>
+        </nav>
 
         {{!-- Menu (id=menu too so accordion nested links work) --}}
         <nav class="menu" id="menu">
